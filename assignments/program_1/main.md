@@ -1,5 +1,5 @@
 ***cpp
-/**
+/*
 * @ProgramName: Program-1
 * @Author: Ricardo Rodriguez
 * @Description:
@@ -13,7 +13,7 @@
 #include<math.h>
 using namespace std;
 
-/**
+/*
 Structure to hold an rgb value
 */
 struct rgb {
