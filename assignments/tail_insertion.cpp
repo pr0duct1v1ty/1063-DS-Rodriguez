@@ -1,3 +1,12 @@
+/**
+* @ProgramName: Homework 1 - EndSert Method
+* @Author: Ricardo Rodriguez
+* @Description: 
+*     This program runs several random numbers into a list and prints them out
+* @Course: 1063 Data Structures
+* @Semester: Spring 2017
+* @Date: 02 08 1998
+*/
 #include <iostream>
 
 struct Node {
@@ -6,6 +15,7 @@ struct Node {
 };
 
 using namespace std;
+
 
 class List {
 private:
@@ -46,7 +56,17 @@ public:
 			}
 		}
 	}
-
+	/**
+* @FunctionName: EndSert
+* @Description: 
+*    
+* @Params:
+*    rgb** image - 2D array holding rgb values
+*    int width - width of image
+*    int height - height of image
+* @Returns:
+*    void
+*/
 	void EndSert(int x) {
 		Node *Temp = new Node;
 		Temp->Data = x;
