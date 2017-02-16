@@ -38,8 +38,9 @@ empty
 
 ```cpp
 int NumDigits(int num){
-    // Returns the "length" of an integer
     if (num <= 0)
       return 1 + NumDigits(num/10);
 }
 ```
+
+
