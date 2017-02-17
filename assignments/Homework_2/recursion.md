@@ -10,15 +10,17 @@
 |3   |A    |
 |4   |@    |
 **Output:**
->A
-
->B
-
+>A  
+>B  
 >C
 
 ####Q2: Trace A('3')
 
-empty
+|Case|ch = |
+|:--:|:---:|
+|1   |3    |
+**Output**
+>empty
 
 ####Q3: Trace B(4)
 
