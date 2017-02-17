@@ -1,3 +1,4 @@
+```cpp
 /**
 * @ProgramName: Program-2
 * @Author: Ricardo Rodriguez
@@ -166,3 +167,4 @@ int main() {
 
 	return 0;
 }
+```
