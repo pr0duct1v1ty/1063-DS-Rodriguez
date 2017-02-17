@@ -134,10 +134,27 @@ int MyPow(int base, int exp){
 ```cpp
 int SumArray(int A[], int n)
     // Return sum of A[0] + A[1] + … + A[n-1]
-    if (n=0)
-        return A[n]
-    cout << A[n] << endl;
-    return A[n] + SumArray(A[],n-1);
+    if (n==0)
+        return 0;
+    cout << A[n-1] << endl;
+    return A[n-1] + SumArray(A[],n-1);
     
 )
 ```
+
+|Case |n =  |Returns|
+|:---:|:---:|:-----:|
+|1    |6    |37     |
+|2    |5    |26     |
+|3    |4    |18     |
+|4    |3    |11     |
+|5    |2    |6      |
+|6    |1    |2      |
+|7    |0    |0      |
+**Output:**
+>11  
+>8  
+>7  
+>5  
+>4  
+>2
