@@ -84,8 +84,60 @@
 ```cpp
 int NumDigits(int num){
     if (num <= 0)
-      return 1 + NumDigits(num/10);
+        return 0;
+    cout << num << endl;
+    return 1 + NumDigits(num/10);
 }
 ```
 
+|Case |num =|Returns|
+|:---:|:---:|:-----:|
+|1    |5679 |4      |
+|2    |567  |3      |
+|3    |56   |2      |
+|4    |5    |1      |
+|5    |0    |0      |
+**Output:**
+>5679  
+>567  
+>56  
+>5
 
+---
+
+###Q7: Write a function `MyPow()` - Which will raise a given number to a power. Trace for 2<sup>3</sup>.
+
+```cpp
+int MyPow(int base, int exp){
+    if (exp == 0)
+        return 1;
+    cout << base << '^' << exp << endl;
+    return base * MyPow(base,exp-1);
+}
+```
+
+|Case |base=|pow =|Returns|
+|:---:|:---:|:---:|:-----:|
+|1    |2    |3    |8      |
+|2    |2    |2    |4      |
+|3    |2    |1    |2      |
+|4    |2    |0    |1      |
+**Output:**
+>2^3  
+>2^2  
+>2^1
+
+---
+
+###Q8: Complete the function and trace for A[2,4,5,7,8,11]
+
+```cpp
+int SumArray(int A[], int n)
+    // Return sum of A[0] + A[1] + … + A[n-1]
+    if (n=0)
+        return A[n]
+    cout << A[n] << endl;
+    return A[n] + SumArray(A[],n-1);
+    
+)
+```
