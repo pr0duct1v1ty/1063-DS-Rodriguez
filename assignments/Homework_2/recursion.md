@@ -9,7 +9,7 @@
 |2   |B    |
 |3   |A    |
 |4   |@    |
-Output:
+**Output:**
 >A
 
 >B
