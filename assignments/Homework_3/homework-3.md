@@ -1,7 +1,13 @@
-#Homework 3
-###Ricardo Rodriguez - 1063 Data Structures - Spring 2017 - 27/02/2017
-
 ```cpp
+/**
+* @Homework: Homework-3
+* @Author: Ricardo Rodriguez
+* @Description: 
+*     This method prints a cicular array
+* @Course: 1063 Data Structures
+* @Semester: Spring 2017
+* @Date: 27 02 2017
+*/
 /**
 * @FunctionName: Print
 * @Description: 
