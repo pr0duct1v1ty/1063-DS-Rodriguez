@@ -1,3 +1,4 @@
+```assembly
 ;Ricardo Rodriguez
   .MODEL  small
   .STACK  100h
@@ -73,3 +74,4 @@ done:
        mov  ah,4ch
 	   int  21h
 	   END  Main
+```
