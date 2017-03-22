@@ -80,7 +80,7 @@ public:
 		cout << endl;
 	}
 };
-
+// converts infix to postfix
 Queue toPostFix(string infix)
 {
 	Stack InFix(100);
@@ -149,7 +149,7 @@ Queue toPostFix(string infix)
 
 	return PostFix;
 }
-
+// evaluates postfix and returns and integer answer
 int evaluatePostFix(Queue PostFix)
 {
 	Stack Order(100);
@@ -199,7 +199,7 @@ int evaluatePostFix(Queue PostFix)
 	Answer = Order.pop();
 	return Answer;
 }
-
+// inputs a string in infix expression then converts it to postfix and evalutes the expression and output it to the file "Output.txt"
 int main() {
 	ofstream Output;
 	Output.open("Output.txt", ios::out | ios::app);
