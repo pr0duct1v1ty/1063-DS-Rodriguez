@@ -1,4 +1,3 @@
-```cpp
 //Ricardo Rodriguez
 #include<iostream>
 #include<string>
@@ -240,4 +239,3 @@ int main() {
 	Output.close();
 	Input.close();
 }
-```
