@@ -31,7 +31,7 @@ public:
 	}
 	void printStack() {
 		for (int i = top; i >= 0; i--) {
-				cout << S[i] << " ";
+			cout << S[i] << " ";
 		}
 		cout << endl;
 	}
@@ -122,13 +122,13 @@ Queue toPostFix(string infix)
 						if (InFix.Top() != '^')
 							InFix.push('z');
 					}
-//					cout << "error" << endl;
+					//					cout << "error" << endl;
 
 				}
 				if (InFix.Top() == 'z')
 					InFix.pop();
 				InFix.push(infix[i]);
-//				cout << "done2" << endl;
+				//				cout << "done2" << endl;
 
 			}
 			else if (infix[i] == ')')
@@ -154,10 +154,10 @@ Queue toPostFix(string infix)
 int evaluatePostFix(Queue PostFix)
 {
 	Stack Order(100);
-	int x, y, integerValue;
+	int x, y, pow, integerValue;
 	int Answer;
 	char next;
-	
+
 	while (!PostFix.Empty())
 	{
 		next = PostFix.Pop();
@@ -170,6 +170,7 @@ int evaluatePostFix(Queue PostFix)
 		{
 			y = Order.pop();
 			x = Order.pop();
+			pow = 0;
 
 			switch (next)
 			{
@@ -186,7 +187,21 @@ int evaluatePostFix(Queue PostFix)
 				Order.push(x / y);
 				break;
 			case '^':
-				Order.push(x ^ y);
+				if (y == 0)
+					Order.push(1);
+				else if (y == 1)
+					Order.push(x);
+				else
+				{
+					pow = x*x;
+					y -= 2;
+					while (y > 0)
+					{
+						pow = pow*x;
+						y--;
+					}
+					Order.push(pow);
+				}
 				break;
 			case '%':
 				Order.push(x % y);
@@ -203,18 +218,25 @@ int evaluatePostFix(Queue PostFix)
 // inputs a string in infix expression then converts it to postfix and evalutes the expression and output it to the file "Output.txt"
 int main() {
 	ofstream Output;
+	ifstream Input;
+	Input.open("exp.txt");
 	Output.open("Output.txt", ios::out | ios::app);
 
 	string infixString;
 	Queue postfix(20);
-	int answer;
+	int answer, count;
 
-	getline(cin, infixString);
-	postfix = toPostFix(infixString);
-	answer = evaluatePostFix(postfix);
-
-	Output << infixString << " = " << answer << endl;
-
+	Input >> count;
+	getline(Input, infixString);
+	for (int i = 0; i < count; i++)
+	{
+		getline(Input, infixString);
+		postfix = toPostFix(infixString);
+		answer = evaluatePostFix(postfix);
+		Output << infixString << " = " << answer << endl;
+	}
+	
 	Output.close();
+	Input.close();
 }
 ```
